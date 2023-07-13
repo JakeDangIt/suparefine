@@ -10,7 +10,7 @@ const HomePage = () => {
       <div className="sideMenu">
         <SideMenu />
       </div>
-      <div className="homePage">
+      <div className="main">
         <div className="header">
           <AppLogo />
           <SearchBar />
