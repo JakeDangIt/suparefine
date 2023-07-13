@@ -4,8 +4,8 @@ import "../styles/SearchBar.css";
 const SearchBar = () => {
   return (
     <div className="searchBar">
-      <input type="text" placeholder="Search for recipes" className="input" />
-      <button className="button">Search</button>
+      <input type="text" placeholder="search for recipes" className="input" />
+      <button className="button"><img src="/searchIcon.svg" /></button>
     </div>
   );
 };
