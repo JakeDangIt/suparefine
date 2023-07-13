@@ -12,7 +12,10 @@ import "./App.css";
 import authProvider from "./authProvider";
 import { supabaseClient } from "./utility";
 import { CountriesCreate, CountriesEdit, CountriesList, CountriesShow } from "./pages/countries";
-import { FoodstuffsList, FoodstuffsCreate, FoodstuffsEdit,FoodstuffsShow } from "./pages/foodstuffs"
+import { FoodstuffsList, FoodstuffsCreate, FoodstuffsEdit, FoodstuffsShow } from "./pages/foodstuffs"
+import HomePage from "./pages/HomePage.jsx";
+
+
 
 function App() {
   return (
@@ -65,6 +68,7 @@ function App() {
             show: "/foodstuffs/show/:id"
           }]}>
           <Routes>
+            <Route path="/" element={<HomePage />} />
             <Route path="/foodstuffs">
               <Route index element={<FoodstuffsList />} />
               <Route path="create" element={<FoodstuffsCreate />} />
@@ -72,6 +76,7 @@ function App() {
               <Route path="show/:id" element={<FoodstuffsShow />} />
             </Route>
           </Routes>
+
           <RefineKbar />
           <UnsavedChangesNotifier />
           <DocumentTitleHandler />
