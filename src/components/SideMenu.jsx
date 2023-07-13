@@ -1,25 +1,14 @@
 import React from 'react';
+import '../styles/SideMenu.css';
 
 const SideMenu = () => {
-    const styles = {
-        sideMenu: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-        },
-        icons: {
-            margin: '0.5rem',
-            height: '2rem',
-        },
-    };
-
-    return (
-        <div style={styles.sideMenu}>
-            <img src="/MenuIcons/HomeIcon.svg" alt="Home Icon" style={styles.icons} />
-            <img src="/MenuIcons/SavedIcon.svg" alt="Saved Icon" style={styles.icons} />
-            <img src="/MenuIcons/NewPostIcon.svg" alt="New Post Icon" style={styles.icons} />
-        </div>
-    );
+  return (
+    <div className="sideMenu">
+      <img src="/MenuIcons/HomeIcon.svg" alt="Home Icon" className="icons" />
+      <img src="/MenuIcons/SavedIcon.svg" alt="Saved Icon" className="icons" />
+      <img src="/MenuIcons/NewPostIcon.svg" alt="New Post Icon" className="icons" />
+    </div>
+  );
 };
 
 export default SideMenu;

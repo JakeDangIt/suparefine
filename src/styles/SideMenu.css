@@ -1,0 +1,11 @@
+.sideMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icons {
+    margin: 0.5rem;
+    height: 2rem;
+  }
+  

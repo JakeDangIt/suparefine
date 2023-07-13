@@ -1,17 +1,8 @@
-import React from 'react'
+import React from 'react';
+import '../styles/AppLogo.css';
 
-export default function logo() {
-  const styles = {
-    logo: {
-      color: '#000',
-      fontFamily: 'Kumbh Sans',
-      fontSize: '2rem',
-      fontStyle: 'normal',
-      fontWeight: '600',
-      lineHeight: 'normal',
-    }
-  }
+export default function AppLogo() {
   return (
-    <div style={styles.logo}>RecipeBook</div>
-  )
+    <div className="logo">RecipeBook</div>
+  );
 }
