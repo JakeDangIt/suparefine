@@ -20,6 +20,7 @@ import {
 import UserProfile from "./pages/account/profile";
 import SignUp from "./pages/account/signup";
 import Login from "./pages/account/login";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
               index
               element={<NavigateToResource resource="foodstuffs" />}
             />
+            <Route path="/home" element={<HomePage/>}/>
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/profile" element={<UserProfile />}></Route>
