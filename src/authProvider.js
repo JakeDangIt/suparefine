@@ -2,7 +2,7 @@ import { AuthBindings } from "@refinedev/core";
 
 import { supabaseClient } from "./utility";
 
-const authProvider: AuthBindings = {
+const authProvider = {
   login: async ({ email, password, providerName }) => {
     // sign in with oauth
     try {
@@ -45,7 +45,7 @@ const authProvider: AuthBindings = {
           redirectTo: "/",
         };
       }
-    } catch (error: any) {
+    } catch (error) {
       return {
         success: false,
         error,
@@ -80,7 +80,7 @@ const authProvider: AuthBindings = {
           redirectTo: "/",
         };
       }
-    } catch (error: any) {
+    } catch (error) {
       return {
         success: false,
         error,
@@ -116,7 +116,7 @@ const authProvider: AuthBindings = {
           success: true,
         };
       }
-    } catch (error: any) {
+    } catch (error) {
       return {
         success: false,
         error,
@@ -150,7 +150,7 @@ const authProvider: AuthBindings = {
           redirectTo: "/",
         };
       }
-    } catch (error: any) {
+    } catch (error) {
       return {
         success: false,
         error,
@@ -199,7 +199,7 @@ const authProvider: AuthBindings = {
           redirectTo: "/login",
         };
       }
-    } catch (error: any) {
+    } catch (error) {
       return {
         authenticated: false,
         error: error || {
