@@ -24,7 +24,7 @@ export const CreatePostShow = () => {
       >
         <h1>Foodstuff Show</h1>
         <div style={{ display: "flex", gap: "8px" }}>
-          <button onClick={() => list("createpost")}>createpost</button>
+          <button onClick={() => list("createpost")}>See your posts</button>
           <button onClick={() => edit("createpost", id ?? "")}>Edit</button>
         </div>
       </div>
@@ -34,12 +34,20 @@ export const CreatePostShow = () => {
           <div>{record?.id ?? ""}</div>
         </div>
         <div style={{ marginTop: "6px" }}>
-          <h5>Name</h5>
-          <div>{record?.name}</div>
+          <h5>Recipe Name</h5>
+          <div>{record?.title}</div>
         </div>
         <div style={{ marginTop: "6px" }}>
-          <h5>Category</h5>
-          <div>{record?.category}</div>
+          <h5>Description</h5>
+          <div>{record?.description}</div>
+        </div>
+        <div style={{ marginTop: "6px" }}>
+          <h5>Ingredients</h5>
+          <div>{record?.ingredients}</div>
+        </div>
+        <div style={{ marginTop: "6px" }}>
+          <h5>Directions</h5>   
+          <div>{record?.directions}</div>
         </div>
       </div>
     </div>

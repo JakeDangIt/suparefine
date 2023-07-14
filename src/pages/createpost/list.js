@@ -12,14 +12,24 @@ export const CreatePostList = () => {
                 header: "Id",
             },
             {
-                id: "name",
-                accessorKey: "name",
-                header: "Name",
+                id: "Recipe Name",
+                accessorKey: "title",
+                header: "Recipe Name",
             },
             {
-                id: "category",
-                accessorKey: "category",
-                header: "Category",
+                id: "Description",
+                accessorKey: "description",
+                header: "Description",
+            },
+            {
+                id: "Ingredients",
+                accessorKey: "ingredients",
+                header: "Ingredients",
+            },
+            {
+                id: "Directions",
+                accessorKey: "directions",
+                header: "Directions",
             },
             {
                 id: "actions",
@@ -95,7 +105,7 @@ export const CreatePostList = () => {
                     justifyContent: "space-between",
                 }}
             >
-                <h1>createpost</h1>
+                <h1>Posts</h1>
                 <button onClick={() => create("createpost")}>Create</button>
             </div>
             <div style={{ maxWidth: "100%", overflowY: "scroll" }}>

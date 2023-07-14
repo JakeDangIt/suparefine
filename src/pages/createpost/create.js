@@ -20,10 +20,6 @@ export const CreatePostCreate = () => {
         formState: { errors },
     } = useForm();
 
-    const { options: categoryOptions } = useSelect({
-        resource: "categories",
-    });
-
     return (
         <div style={{ padding: "16px" }}>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -31,7 +27,7 @@ export const CreatePostCreate = () => {
                 <div>
                     <button
                         onClick={() => {
-                            list("post");
+                            list("createpost"); 
                         }}
                     >
                         {translate("See your posts")}
@@ -68,12 +64,12 @@ export const CreatePostCreate = () => {
                             rows={5}
                             cols={33}
                             style={{ verticalAlign: "top" }}
-                            {...register("content", {
+                            {...register("description", {
                                 required: "This field is required",
                             })}
                         />
                         <span style={{ color: "red" }}>
-                            {errors.content && errors.content.message}
+                            {errors.description && errors.description.message}
                         </span>
                     </label>
                     <label>

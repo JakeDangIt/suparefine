@@ -13,19 +13,18 @@ export const CreatePostEdit = () => {
         formState: { errors },
     } = useForm();
 
-    const foodstuffsData = queryResult?.data?.data;
+    const createpostData = queryResult?.data?.data;
 
     return (
         <div style={{ padding: "16px" }}>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <h1>Foodstuff Edit</h1>
+                <h1>Edit Post</h1>
                 <div>
                     <button
                         onClick={() => {
-                            list("foodstuffs");
+                            list("createpost");
                         }}
                     >
-                        Foodstuffs
                     </button>
                 </div>
             </div>
@@ -52,27 +51,51 @@ export const CreatePostEdit = () => {
                         </span>
                     </label>
                     <label>
-                        <span style={{ marginRight: "8px" }}>Name</span>
+                        <span style={{ marginRight: "8px" }}>Recipe Name</span>
                         <input
                             type="text"
-                            {...register("name", {
+                            {...register("title", {
                                 required: "This field is required",
                             })}
                         />
                         <span style={{ color: "red" }}>
-                            {(errors)?.name?.message}
+                            {(errors)?.title?.message}
                         </span>
                     </label>
                     <label>
-                        <span style={{ marginRight: "8px" }}>Category</span>
+                        <span style={{ marginRight: "8px" }}>Description</span>
                         <input
                             type="text"
-                            {...register("category", {
+                            {...register("description", {
                                 required: "This field is required",
                             })}
                         />
                         <span style={{ color: "red" }}>
-                            {(errors)?.category?.message}
+                            {(errors)?.description?.message}
+                        </span>
+                    </label>
+                    <label>
+                        <span style={{ marginRight: "8px" }}>Ingredients</span>
+                        <input
+                            type="text"
+                            {...register("ingredients", {
+                                required: "This field is required",
+                            })}
+                        />
+                        <span style={{ color: "red" }}>
+                            {(errors)?.ingredients?.message}
+                        </span>
+                    </label>
+                    <label>
+                        <span style={{ marginRight: "8px" }}>Directions</span>
+                        <input
+                            type="text"
+                            {...register("directions", {
+                                required: "This field is required",
+                            })}
+                        />
+                        <span style={{ color: "red" }}>
+                            {(errors)?.directions?.message}
                         </span>
                     </label>
                     <div>
