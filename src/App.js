@@ -21,7 +21,12 @@ import UserProfile from "./pages/account/profile";
 import SignUp from "./pages/account/signup";
 import Login from "./pages/account/login";
 import HomePage from "./pages/HomePage";
-import CreatePost from "./pages/CreatePost";
+import {
+  CreatePostList,
+  CreatePostCreate,
+  CreatePostEdit,
+  CreatePostShow,
+} from "./pages/createpost/index";
 
 function App() {
   return (
@@ -39,11 +44,17 @@ function App() {
           resources={[
             {
               name: "foodstuffs",
-
               list: "/foodstuffs",
               create: "/foodstuffs/create",
               edit: "/foodstuffs/edit/:id",
               show: "/foodstuffs/show/:id",
+            },
+            {
+              name: "createpost",
+              list: "/createpost",
+              create: "/createpost/create",
+              edit: "/createpost/edit/:id",
+              show: "/createpost/show/:id",
             },
           ]}
         >
@@ -53,7 +64,12 @@ function App() {
               element={<NavigateToResource resource="foodstuffs" />}
             />
             <Route path="/home" element={<HomePage />} />
-            <Route path="/create" element={<CreatePost />} />
+            <Route path="/createpost">
+              <Route index element={<CreatePostList />} />
+              <Route path="create" element={<CreatePostCreate />} />
+              <Route path="edit/:id" element={<CreatePostEdit />} />
+              <Route path="show/:id" element={<CreatePostShow />} />
+            </Route>
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/profile" element={<UserProfile />}></Route>
